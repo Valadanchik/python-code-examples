@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Image</title>
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+        a {
+               background-color: #007BFF;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            text-decoration: none;
+        }
+        .mt-20 {
+            margin-top: 20px;
+        }
+
+        .btn_grey {
+            background-color: #ccc;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Center the input elements */
+        form input[type="file"],
+        form input[type="submit"] {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 3px;
+            margin-top: 10px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 5px;
+            margin: 10px 0;
+            border: 1px solid black;
+            color: black;
+            border-radius: 5px;
+
+            padding: 5px;
+            /*margin-bottom: 10px;*/
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    <form id="upload-form" action="/uploadfile/" method="post" enctype="multipart/form-data">
+        <input type="file" accept="image/*" name="file" required>
+        <input type="submit" value="Process">
+    </form>
+    <div style="margin-top:30px">
+        <a href="/data" class="btn_grey">Show data</a>
+    </div>
+</body>
+</html>
